@@ -1,0 +1,180 @@
+:root{
+    --netflix-black: #000;
+    --netflix-red: #E50914;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+body{
+    background-color: var(--netflix-black);
+    color:#fff;
+    height: 100vh
+}
+
+/*
+    Global
+*/
+.container{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/*
+    HEADER
+*/
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: linear-gradient(180deg, #000 50%, transparent);
+    z-index: 1;
+}
+.netflix-header{
+    display: grid;
+    grid-template-columns: 120px 1fr auto auto;
+    align-items: center;
+    padding: 1rem;
+    grid-gap: 1rem;
+}
+.netflix-header .netflix-logo{
+    width: 120px;
+}
+.netflix-header .main-menu{
+    display: grid;
+    grid-auto-columns: fit-content;
+    grid-auto-flow: column;
+    grid-gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.netflix-header .main-menu .item{
+    color: #eee;
+}
+.netflix-header .main-menu .item:hover{
+    color: #fff;
+}
+.netflix-header .search{
+    background-color: transparent;
+    border: none;
+}
+.netflix-header .search img{
+    width: 18px
+}
+.netflix-header .profile{
+    position: relative;
+}
+.netflix-header .profile .user-pp{
+    width: 40px;
+    height: 40px;
+}
+.netflix-header .profile-menu{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #fff;
+    width: 140px;
+    color: #000;
+    right: 0;
+    padding: 1rem 1rem .25rem;
+    font-size: 13px;
+}
+.netflix-header .profile:hover .profile-menu{
+    display: block;
+}
+.netflix-header .profile-menu .divider{
+    background-color: #ccc;
+    height: 1px;
+    margin: 1rem 0;
+}
+.netflix-header .profile-menu .item.with-image{
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    margin: .25rem
+}
+.netflix-header .profile-menu .item{
+    height: 1.5rem;
+    align-content: center;
+}
+.netflix-header .profile-menu .item img{
+    width: auto;
+    height: 100%;
+    margin-right: .5rem
+}
+/*
+    MAIN
+    Featured Movie
+*/
+.featured{
+    max-height: 80vh;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.featured .description{
+    position: absolute;
+    z-index: 1;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+}
+.featured .description .block{
+    max-width: 400px;
+}
+.featured .description .block h1{
+    font-size: 2.5rem;
+    margin: .5rem 0;
+}
+.featured .description .block .action{
+    display: flex;
+    gap: .5rem;
+    margin: 1rem 0;
+}
+.featured .description .block .action .button{
+    display: block;
+    padding: .85rem 1.25rem;
+    background-color: rgba(0,0,0, 0.7);
+    text-align: center;
+    font-size: 13px;
+    border-radius: 5px;
+    color: #333;
+    transition: background-color ease-in-out 250ms;
+    color: #fff;
+    text-transform: uppercase;
+    border: solid 1px rgba(255,255,255,0.25);
+}
+.featured .description .block .action .button i{
+    margin-right: .5rem;
+}
+.featured .description .block .action .button:hover{
+    background-color: #fff;
+    color: #000
+}
+.featured .banner{
+    position: relative;
+    max-height: 80vh;
+}
+.featured .banner:before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(0deg, #000, transparent);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    top: 0;
+}
+.featured .banner img{
+    width: 100%;
+    z-index: -1
+} 
+
+/*
+    MAIN
+    Categories
+*/
